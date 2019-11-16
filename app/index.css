@@ -25,7 +25,3 @@ body {
     grid-area:result;
     display:grid; place-content:center;
 }
-
-.result canvas {
-   
-}
