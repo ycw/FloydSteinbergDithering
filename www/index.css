@@ -1,0 +1,31 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    display:grid;
+    grid-template:
+        'status' auto
+        'result' 1fr
+        / 1fr;
+    height:100vh;
+    width:100%;
+}
+
+.status {
+    grid-area:status;
+    display:grid; place-content:center;
+    padding:1em;
+    position:sticky; top:0; z-index:1;
+    background:hsla(0,0%,100%,0.9);
+}
+
+.result {
+    grid-area:result;
+    display:grid; place-content:center;
+}
+
+.result canvas {
+   
+}

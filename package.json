@@ -1,0 +1,25 @@
+{
+  "name": "foowa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
+    "_asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
+    "_asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    
+    "asbuild:u": "asc assembly/index.ts -b build/untouched.wasm --validate --debug --memoryBase 58982400",
+    "asbuild:o": "asc assembly/index.ts -b build/optimized.wasm --validate -O3 --memoryBase 58982400",
+    "asbuild": "npm run asbuild:u && npm run asbuild:o",
+
+    "build": "npm run asbuild:o && tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "github:assemblyscript/assemblyscript",
+    "typescript": "^3.7.2"
+  }
+}
