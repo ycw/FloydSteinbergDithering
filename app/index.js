@@ -1,10 +1,10 @@
-import { Init } from './glue.js';
+import { Init } from '../dist/glue.js';
 
 let imgUrl = '';
 let wrapper = null;
 
 (async function () {
-    wrapper = await Init('../build/optimized.wasm');
+    wrapper = await Init('../dist/optimized.wasm');
     document.body.ondragover = handleDragOver;
     document.body.ondrop = handleDrop;
     log('Please drop an image here');

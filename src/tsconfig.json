@@ -2,9 +2,9 @@
     "compilerOptions": {
         "target": "es2018",
         "module": "es2015",
-        "outDir": "./app"
+        "outDir": "../dist"
     }, 
     "include": [
-        "./src/glue.ts"
+        "./glue.ts"
     ]
 }
