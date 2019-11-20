@@ -15,7 +15,7 @@ body {
 
 .status {
     grid-area:status;
-    display:grid; place-content:center;
+    display:grid; place-content:center start;
     padding:1em;
     position:sticky; top:0; z-index:1;
     background:hsla(0,0%,100%,0.9);
