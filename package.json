@@ -6,7 +6,6 @@
   "scripts": {
     "_asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
     "_asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
-    
     "build:0": "asc assembly/index.ts -b dist/optimized.wasm --validate -O3 --memoryBase 58982400",
     "build:1": "tsc -p ./src/tsconfig.json",
     "build": "npm run build:0 && npm run build:1"
